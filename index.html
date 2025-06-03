@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsible Artificial Intelligence (RAI) Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F8F9FA;
+            color: #212529;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+        }
+        .text-olive { color: #556B2F; }
+        .bg-olive-dark { background-color: #3B4A23; }
+        .bg-olive-light { background-color: #F0F3EC; }
+        .bg-olive-accent { background-color: #556B2F; }
+        .border-olive-accent { border-color: #556B2F; }
+        .hover\:bg-olive-darker:hover { background-color: #3B4A23; }
+        .hover\:text-olive:hover { color: #556B2F; }
+        .scroll-target { scroll-margin-top: 4rem; }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-12 h-12 flex items-center justify-center bg-gray-200 rounded-full">
+                    <span class="text-xl font-bold text-olive">Logo</span>
+                </div>
+                <span class="text-xl font-semibold text-gray-700 hidden sm:block">RAI Lab</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-olive transition-colors">About</a>
+                <a href="#research" class="text-gray-600 hover:text-olive transition-colors">Projects & Grants</a>
+                <a href="#news" class="text-gray-600 hover:text-olive transition-colors">Publications</a>
+                <a href="#team" class="text-gray-600 hover:text-olive transition-colors">Team</a>
+                <a href="#contact" class="text-gray-600 hover:text-olive transition-colors">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#research" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Projects & Grants</a>
+            <a href="#news" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Publications</a>
+            <a href="#team" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Team</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="min-h-[80vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight fade-in">
+                    Responsible<br>Artificial Intelligence Lab
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto fade-in" style="transition-delay: 200ms;">
+                    Description for the motto of our lab.
+                </p>
+                <a href="#research" class="mt-10 inline-block bg-olive-accent text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-olive-darker transition-transform transform hover:scale-105 fade-in" style="transition-delay: 400ms;">
+                    Explore Our Work
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="scroll-target py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Vision Title</h2>
+                        <p class="text-gray-600 mb-4">
+                            Description for the vision section.
+                        </p>
+                    </div>
+                    <div class="fade-in flex justify-center items-center p-8">
+                        <div class="grid grid-cols-6 gap-2 w-full max-w-sm">
+                            <script>
+                                for(let i = 0; i < 36; i++) {
+                                    const delay = Math.random() * 1.5;
+                                    const opacity = Math.random() * 0.5 + 0.2;
+                                    // Modified structure to ensure circles maintain aspect ratio
+                                    document.write(`
+                                        <div class="relative w-full pb-[100%]">
+                                            <div class="absolute inset-0 bg-olive-accent rounded-full animate-pulse" style="animation-delay: ${delay}s; opacity: ${opacity};"></div>
+                                        </div>
+                                    `);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research" class="scroll-target py-20 bg-olive-light">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">Projects and Grants</h2>
+                    <p class="mt-2 text-gray-600">Explore our current research initiatives and funding opportunities.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in">
+                        <div class="text-4xl text-olive mb-4">💡</div>
+                        <h3 class="text-xl font-bold mb-2">Project One Title</h3>
+                        <p class="text-gray-600">A brief description of this ongoing project, outlining its objectives and expected contributions to the field of responsible AI.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in" style="transition-delay: 200ms;">
+                        <div class="text-4xl text-olive mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold mb-2">Grant-Funded Research</h3>
+                        <p class="text-gray-600">Details about a significant grant supporting our work, including its focus and the impact it aims to achieve.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in" style="transition-delay: 400ms;">
+                        <div class="text-4xl text-olive mb-4">📈</div>
+                        <h3 class="text-xl font-bold mb-2">Collaborative Initiative</h3>
+                        <p class="text-gray-600">Information on a collaborative project with external partners, highlighting shared goals and interdisciplinary efforts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="scroll-target py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">Our Team</h2>
+                    <p class="mt-2 text-gray-600">Meet the researchers and innovators driving our mission.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center fade-in">
+                        <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-4xl text-gray-400">👤</span>
+                        </div>
+                        <h4 class="text-lg font-bold">Professor Anandi Dutta</h4>
+                        <p class="text-sm text-olive">Assistant Professor</p>
+                    </div>
+                     <div class="text-center fade-in" style="transition-delay: 150ms;">
+                        <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                           <span class="text-4xl text-gray-400">👤</span>
+                        </div>
+                        <h4 class="text-lg font-bold">Team Member 1</h4>
+                        <p class="text-sm text-olive">Research Team Member</p>
+                    </div>
+                     <div class="text-center fade-in" style="transition-delay: 300ms;">
+                        <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                           <span class="text-4xl text-gray-400">👤</span>
+                        </div>
+                        <h4 class="text-lg font-bold">Team Member 2</h4>
+                        <p class="text-sm text-olive">Research Team Member</p>
+                    </div>
+                     <div class="text-center fade-in" style="transition-delay: 450ms;">
+                        <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-4xl text-gray-400">👤</span>
+                        </div>
+                        <h4 class="text-lg font-bold">Team Member 3</h4>
+                        <p class="text-sm text-olive">Research Team Member</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="scroll-target py-20 bg-olive-light">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">Publications</h2>
+                    <p class="mt-2 text-gray-600">Our latest academic contributions.</p>
+                </div>
+                <div class="space-y-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                        <p class="text-sm text-gray-500 mb-1">Date Placeholder</p>
+                        <h4 class="font-bold text-gray-800">Publication 1</h4>
+                        <a href="#" class="text-sm text-olive hover:underline">Description for Publication 1.</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                        <p class="text-sm text-gray-500 mb-1">Date Placeholder</p>
+                        <h4 class="font-bold text-gray-800">Publication 2</h4>
+                        <a href="#" class="text-sm text-olive hover:underline">Description for Publication 2.</a>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                        <p class="text-sm text-gray-500 mb-1">Date Placeholder</p>
+                        <h4 class="font-bold text-gray-800">Publication 3</h4>
+                        <a href="#" class="text-sm text-olive hover:underline">Description for Publication 3.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer id="contact" class="scroll-target bg-olive-dark text-white">
+            <div class="container mx-auto px-6 py-12">
+                <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">RAI Lab</h3>
+                        <p class="text-sm text-gray-300">Address</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Get In Touch</h3>
+                        <a href="mailto:contact@railab.edu" class="text-gray-300 hover:text-white transition-colors">contact@railab.edu</a>
+                    </div>
+                    <div>
+                         <h3 class="font-bold text-lg mb-2">Follow Us</h3>
+                         <div class="flex space-x-4 justify-center md:justify-start">
+                             <a href="#" class="text-gray-300 hover:text-white">Twitter</a>
+                             <a href="#" class="text-gray-300 hover:text-white">LinkedIn</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-600 mt-10 pt-6 text-center text-sm text-gray-400">
+                    &copy; 2025 Responsible Artificial Intelligence Lab. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a, nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if(this.getAttribute('href').startsWith('#')) {
+                       e.preventDefault();
+                       mobileMenu.classList.add('hidden');
+                       document.querySelector(this.getAttribute('href')).scrollIntoView({
+                           behavior: 'smooth'
+                       });
+                    }
+                });
+            });
+
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.2,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
